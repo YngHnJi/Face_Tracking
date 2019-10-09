@@ -37,20 +37,32 @@ It's a project to track your face with webcam combined with servo motor
 
 <img width="440" alt="haar_feature" src="https://user-images.githubusercontent.com/39265784/66364856-0baa0900-e9c6-11e9-8628-b944db9ee12e.png">
 
-<img width="599" alt="AdaBoosting" src="https://user-images.githubusercontent.com/39265784/66364847-06e55500-e9c6-11e9-909a-7b83e03d6e02.png">
+> Haar-feature = Summation of pixels in black space - summation of pixels in white space
+> Haar-feature's calculated by some filters above it, and it will used as feature data. However, calculating this feature one by one is expensive, so it uses *Integral Image* makes it easier to get summation of pixels in some parts
+
+<img width="366" alt="intgral_image" src="https://user-images.githubusercontent.com/39265784/66441394-a7448380-ea71-11e9-9a2f-ef23985ca999.png">
+
+<img width="562" alt="adaboost2" src="https://user-images.githubusercontent.com/39265784/66441249-efaf7180-ea70-11e9-92d0-57238664b83a.png">
+
+> By Adaboost Algorithm, some meaningless features got from Haar-feature is filterted.
+> It's the algorithm to make a classifier stronger with meaningful features and the point of this algorithm is that 10 normal people can classify something much better than done by one genius.
+> when it trains its model, it focuses on mis-classified result data from previous model. So, it depends on training data a lot which means The possibility of overfitting is really high.
 
 <img width="866" alt="cascade_classifier" src="https://user-images.githubusercontent.com/39265784/66364851-08af1880-e9c6-11e9-9dc3-c5317758c6f4.png">
 
+> Cascade classifier is the algorithm to classify something much faster. There are conditions connected in cascade. So, if input data is enough to pass all this conditions, it will be classified as True value, but if not, it would be filtered at some points.
 
 2. LBPH Face Recognizer
 
-<img width="226" alt="LBPH_algorithm" src="https://user-images.githubusercontent.com/39265784/66364860-0e0c6300-e9c6-11e9-980f-1eab5d440525.png">
+<img width="687" alt="towardsdatascience com:face-recognition-how-lbph-works-90ec258c3d6b" src="https://user-images.githubusercontent.com/39265784/66441279-15d51180-ea71-11e9-96b9-2898fd752ac6.png">
 
-<img width="226" alt="LBPH_algorithm" src="https://user-images.githubusercontent.com/39265784/66364860-0e0c6300-e9c6-11e9-980f-1eab5d440525.png">
+> It uses Local Binary Pattern Histogram(LBPH) algorithm which has strong at various lighting conditions. It makes new feature map based on binary code and spread it to Histogram map. So, Face identification part, input data and training data will be compared each other in this histogram. TO compare similarity, it uses Euclidean distance.
 
 3. Mosse filter
 
 ![mosse](https://user-images.githubusercontent.com/39265784/66364869-1369ad80-e9c6-11e9-8f8c-3f63586ae8e9.png)
+
+> Minimium output sum of squared error, correlation filter
 
 ## Way to improve
 
