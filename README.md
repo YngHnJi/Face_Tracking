@@ -64,6 +64,15 @@ It's a project to track your face with webcam combined with servo motor
 
 > Minimium output sum of squared error, correlation filter
 
+## result
+
+> Face Tracking with controling servo motors.
+
+![result1](https://user-images.githubusercontent.com/39265784/68989558-01641000-088c-11ea-92d4-bacccc8b4fd8.gif)
+
+![result2](https://user-images.githubusercontent.com/39265784/68989559-01641000-088c-11ea-80c9-e955aad5bc15.gif)
+
+
 ## Way to improve
 
 > Because of lack of computing power which Rasberrypi has, it is difficult to use some powerful Deeplearning algorithms. Therefore, if you are available to use GPU machine and wifi module, it would have much better performance than computing in raspberrypi. Over wifi, sending frame from rasp pi to GPU machine and computing. GPU machnine returns data, such as bounding box info or True/False.
